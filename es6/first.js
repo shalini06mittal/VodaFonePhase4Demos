@@ -3,6 +3,8 @@ console.log('hello');
 // npm - node package manager
 // timer and interval methods
 var i = 0;
+var nos =[1,2,3,4,5];
+nos.display();
 var interval = setInterval(function(){
     console.log(++i);
     if(i==10){
