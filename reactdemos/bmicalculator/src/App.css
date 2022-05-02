@@ -1,0 +1,19 @@
+body {
+  background-color: #172b4d;
+}
+.bmi{
+  color:white;
+  padding: 40px;
+  font-size:5em;
+  text-align: center;
+}
+.content{
+  background-color:#274881;
+  border-radius: 11px;
+  margin:auto;
+  padding:30px;
+ width:50%;
+  color:white;
+  font-size: 1.3em;
+  text-align: center;
+}

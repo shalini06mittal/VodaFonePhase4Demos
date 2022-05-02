@@ -8,6 +8,8 @@ import Conditional from './components/Conditional';
 import GroceryList from './components/GroceryList';
 import ClockLifeCycle from './components/ClockLifeCycle';
 import { useState } from 'react';
+import ClockLifeCycleFunctional from './components/ClockLifeCycleFunctional';
+import Register from './components/Register';
 // functional component
 
 /**
@@ -33,11 +35,11 @@ function App() {
 
       <h1>Welcome {name}</h1>
       <p>this is a paragraph</p>
-      <input type='checkbox' 
+      {/* <input type='checkbox' 
        checked={isChecked}
       onChange={()=>setCheched(isChecked ? false: true)}/>
-      {isChecked && <ClockLifeCycle/>}
-      
+      {isChecked && <ClockLifeCycleFunctional/>} */}
+      <Register/>
       {/* pass data to child component is called as props in react */}
       {/* <Greeting username={name} city='Mumbai'/>
       <Welcome name={name} city='Delhi' user ={user}/>
