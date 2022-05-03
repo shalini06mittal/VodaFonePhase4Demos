@@ -25,12 +25,20 @@ export default class BmiForm extends Component {
         }
         this.setState({errors, [name]:value});
     }
-    calculateBmi=()=>
+    calculateBmi=(e)=>
     {
-        let bmi = (this.state.weight) / (this.state.height * this.state.height);
-        this.setState({
-            bmi, show:true
-        })
+        e.preventDefault();
+        let errors = this.state.errors;
+        if(errors.weight.length > 0 || errors.height.length >0)
+        {
+            alert('Please provide valid input')
+        }
+        else{
+            let bmi = (this.state.weight) / (this.state.height * this.state.height);
+            this.setState({
+                bmi, show:true
+            })
+        }
     }
   render() {
     return (
@@ -68,5 +76,5 @@ export default class BmiForm extends Component {
                 }</div>
       </div>
     )
-  }
+  } 
 }

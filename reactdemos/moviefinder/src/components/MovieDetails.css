@@ -1,0 +1,13 @@
+img{
+    width: 400px;
+    height: 400px;
+}
+p{
+    color: #795548;
+    font-size:20px;
+    letter-spacing: 1px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:bolder;
+    width:80%;
+    margin:30px auto;
+}
