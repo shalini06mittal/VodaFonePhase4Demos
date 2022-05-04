@@ -1,6 +1,6 @@
 import React from 'react'
 import {getInvoices} from '../../model/data';
-import {Link} from 'react-router-dom';
+import {Link, Outlet} from 'react-router-dom';
 export default function Invoices() {
   let invoices = getInvoices();
   return (
@@ -13,13 +13,14 @@ export default function Invoices() {
           invoices.map(invoice=>(
             <Link  style={{
               display:'block', margin:'1rem 0'
-            }}
-            to=''>{invoice.name}</Link>
+            }} key ={invoice.number} 
+            to={`${invoice.number}`}>
+              {invoice.name}</Link>
           ))
         }
 
       </nav>
-
+        <Outlet/>
     </div>
   )
 }

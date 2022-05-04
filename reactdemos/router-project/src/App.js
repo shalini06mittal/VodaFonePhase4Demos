@@ -7,6 +7,7 @@ import Header from './components/Header';
 import BookKeeper from './components/bookkeeping/BookKeeper';
 import Invoices from './components/bookkeeping/Invoices';
 import Expenses from './components/bookkeeping/Expenses';
+import Invoice from './components/bookkeeping/Invoice';
 function App() {
   return (
     <div className='container'>
@@ -15,8 +16,20 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/books' element={<BookKeeper/>}>
-          <Route path='invoices' element={<Invoices/>}></Route>
+          <Route path='invoices' element={<Invoices/>}>
+            <Route index element={
+              <div style={{padding:'1rem'}}>
+                <p>Select a name to display invoice details</p>
+              </div>
+            }></Route>
+            <Route path=':invoiceid' element={<Invoice/>}></Route>
+          </Route>
           <Route path='expenses' element={<Expenses/>}></Route>
+          <Route path='*' element={
+            <main style={{padding:'1rem'}}>
+              Nothing on this path</main>
+          }
+          ></Route>
         </Route>
         <Route path='/expenses' element={<Expenses/>}></Route>
       </Routes>
