@@ -200,3 +200,13 @@ let expenses =[
       ]
     }
 ];
+
+export function getExpenses()
+{
+    return expenses;
+}
+
+export function getExpenseDetails(name)
+{
+    return expenses.find(expense => expense.WHO === name);
+}

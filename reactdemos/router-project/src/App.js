@@ -8,6 +8,7 @@ import BookKeeper from './components/bookkeeping/BookKeeper';
 import Invoices from './components/bookkeeping/Invoices';
 import Expenses from './components/bookkeeping/Expenses';
 import Invoice from './components/bookkeeping/Invoice';
+import Expense from './components/bookkeeping/Expense';
 function App() {
   return (
     <div className='container'>
@@ -24,7 +25,14 @@ function App() {
             }></Route>
             <Route path=':invoiceid' element={<Invoice/>}></Route>
           </Route>
-          <Route path='expenses' element={<Expenses/>}></Route>
+          <Route path='expenses' element={<Expenses/>}>
+          <Route index element={
+              <div style={{padding:'1rem'}}>
+                <p>Select a name to display expense details</p>
+              </div>
+            }></Route>
+            <Route path=':name' element={<Expense/>}></Route>
+          </Route>
           <Route path='*' element={
             <main style={{padding:'1rem'}}>
               Nothing on this path</main>
