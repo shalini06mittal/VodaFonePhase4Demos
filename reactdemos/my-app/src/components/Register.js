@@ -28,6 +28,7 @@ export default class Register extends Component {
         this.setState({[name]:value})
     }
   render() {
+    console.log(this.props)
     return (
       <div>
           <h1>Register</h1>
@@ -67,7 +68,7 @@ export default class Register extends Component {
             </div>
             <div>Select A country</div>
             <select name='country' value={this.state.country} onChange={this.handleChange}
-            class="form-select" aria-label="Default select example">
+            className="form-select" aria-label="Default select example">
                 <option value="India">India</option>
                 <option value="USA">USA</option>
                 <option value="UK">UK</option>

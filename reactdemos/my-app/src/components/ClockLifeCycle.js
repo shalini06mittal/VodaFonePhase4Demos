@@ -28,7 +28,7 @@ export default class ClockLifeCycle extends Component {
     }
     shouldComponentUpdate(nextProps, nextState)
     {
-      if(nextState.counter % 5 ==0)
+      if(nextState.counter % 5 ===0)
       return true;
       return false;
          // console.log(nextState.date.toLocaleTimeString(), 

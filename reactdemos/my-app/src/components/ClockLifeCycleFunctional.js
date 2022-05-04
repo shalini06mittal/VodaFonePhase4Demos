@@ -13,7 +13,7 @@ export default function ClockLifeCycleFunctional() {
     const timerId = setInterval(()=>{
       console.log('timer')
       count++;
-      if(count%5==0) setCounter(count);
+      if(count%5===0) setCounter(count);
       tick();
     }, 1000)
     // component unmount

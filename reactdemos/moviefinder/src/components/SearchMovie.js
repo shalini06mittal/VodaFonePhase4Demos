@@ -9,8 +9,10 @@ export default class SearchMovie extends Component {
         show:false,
         selectedMovie:''
     }
+    // debounce time?
 
     handleChange =(e)=>{
+        console.log(e)
         let searchvalue = e.target.value;
         let suggestions = [];
         if(!searchvalue)
