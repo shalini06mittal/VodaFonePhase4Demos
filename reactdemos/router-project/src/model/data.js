@@ -42,6 +42,10 @@ export function getInvoice(invoiceid)
         invoice=>invoice.number === invoiceid);
 }
 
+export function deleteInvoice(invoiceid){
+  invoices = invoices.filter
+  (invoice=>invoice.number !== invoiceid)
+}
 let expenses =[
     {
       "WHO": "Joe",

@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "email": "user1@connectz.com",
+      "password": "user1",
+      "id": 1
+    },
+    {
+      "email": "user2@connectz.com",
+      "password": "user2",
+      "id": 2
+    },
+    {
+      "email": "user3@connectz.com",
+      "password": "user3",
+      "id": 3
+    },
+    {
+      "email": "user4@connectz.com",
+      "password": "user4",
+      "id": 4
+    },
+    {
+      "email": "shalini@connectz.com",
+      "password": "shalini123",
+      "id": 5
+    }
+  ],
+  "posts": [
+    {
+      "email": "shalini@connectz.com",
+      "title": "Learn TomTrain",
+      "description": "This post will provide you with tips and tricks to lead a succesful training",
+      "date-created": "12-12-2021",
+      "id": 1
+    }
+  ]
+}
