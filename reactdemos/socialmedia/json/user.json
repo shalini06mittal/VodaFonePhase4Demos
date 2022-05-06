@@ -24,6 +24,11 @@
       "email": "shalini@connectz.com",
       "password": "shalini123",
       "id": 5
+    },
+    {
+      "username": "user6@connectz.com",
+      "password": "user6",
+      "id": 6
     }
   ],
   "posts": [
