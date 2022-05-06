@@ -13,6 +13,7 @@ function App() {
      <Routes>
        {/* <Route path='/' element={<Navigate to='/login'/>}></Route> */}
        <Route path='/' element={<Dashboard/>}>
+         <Route index element={<Navigate to='/home'/>}></Route>
          <Route path='/home' element={<Home/>}></Route>
          <Route path='/profile' element={<Profile/>}></Route>
          <Route path='/settings' element={<Settings/>}></Route>
@@ -20,7 +21,7 @@ function App() {
        <Route path='/login' element={<Login/>}></Route>
        <Route path='/register' element={<Register/>}></Route>
      </Routes>
-    </div>
+    </div>  
   );
 }
 
