@@ -1,10 +1,33 @@
 import React from 'react'
+import './Posts.css';
+import pic from '../assets/p1.png';
 
-export default function Posts({post}) {
+export default function Posts(props) {
+    const {post, created} = props.post
   return (
-    <div>
-        <h1>Post</h1>
-        {post}
+    <div className='posts'>
+    <div className='jss58'>
+        <div className='jss215'>
+            <div className='jss216'>
+                <div className='jss146'>
+                    <img className='jss148'
+                    src={pic} alt='img'/>
+                </div>
+            </div>
+            <div className='jss218'>
+                <span className="jss105 jss113 jss219">
+                    {localStorage.getItem('email')}
+                </span>
+                <span className='jss105 jss113 jss127'>
+                    {created}
+                </span>
+            </div>
+        </div>
+        <div>
+        <p className='post'>{post}</p>
+        </div>
     </div>
+   
+</div>
   )
 }

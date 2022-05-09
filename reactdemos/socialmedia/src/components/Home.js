@@ -5,8 +5,26 @@ import Posts from "./Posts";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
-  const [post, setPost] = useState({});
+  const [post, setPost] = useState('');
 
+  const handleChange =(event)=>{
+      setPost(event.target.value)
+  }
+
+  const _handleKeyDown=(event)=>{
+    if(event.key === 'Enter')
+    {
+        var date = new Date();
+        var newPost ={
+            post, 
+            created : date.getDate()+'/'+date.getMonth()+'/'+date.getFullYear(),
+        }
+        let posts1 = [...posts]
+        posts1.unshift(newPost)
+        setPosts(posts1);
+        setPost('')
+    }
+  }
   return (
     <div className="container">
       <div className="input-group mb-3 jss58">
@@ -22,14 +40,14 @@ export default function Home() {
           value={post}
           aria-label="Username"
           aria-describedby="basic-addon1"
-         
+          onKeyDown={_handleKeyDown}
+          onChange={handleChange}
         />
       </div>
 
       {posts.length > 0 ? (
-        posts.map((post) => {
-          console.log(post);
-          return <Posts post={post} />;
+        posts.map((post, index) => {
+          return <Posts key={index} post={post} />;
         })
       ) : (
         <div></div>

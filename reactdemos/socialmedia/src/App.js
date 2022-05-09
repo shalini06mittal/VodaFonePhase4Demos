@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import Settings from './components/Settings';
 function App() {
+
   return (
     <div className="App">
      <Routes>

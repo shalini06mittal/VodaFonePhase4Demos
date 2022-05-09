@@ -2,21 +2,21 @@ import React, { useEffect, useState } from 'react'
 import { Link ,useNavigate} from 'react-router-dom';
 import './Login.css';
 export default function Login() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('admin@email.com');
+    const [password, setPassword] = useState('admin');
     const [errorMsg,setErrorMsg] = useState('');
 
     const [users, setUsers] = useState([])
     const navigate = useNavigate();
 
-    useEffect(()=>{
-      fetch('http://localhost:3000/users')
-      .then(res=>res.json())
-      .then(users=>{
-        console.log(users);
-        setUsers(users)
-      });
-    },[])
+    // useEffect(()=>{
+    //   fetch('http://localhost:3000/users')
+    //   .then(res=>res.json())
+    //   .then(users=>{
+    //     console.log(users);
+    //     setUsers(users)
+    //   });
+    // },[])
     const handleChange = (event)=>{
         let name = event.target.name;
         let value = event.target.value;
@@ -30,19 +30,38 @@ export default function Login() {
     const handleSubmit =(event)=>{
       let isLoginValid = false;
       event.preventDefault();
-      for(let user of users){
-        if(user.email === username && user.password === password)
-         { 
-           isLoginValid=true;
-           localStorage.setItem('email',username );
-           navigate('/')
-           break;
-         }
-      }
-      if(!isLoginValid) {
-       setErrorMsg('Invalid Credentials')
-        //alert('Invalid credentials')
-      }
+
+      const user ={email:username,password};
+      fetch('http://localhost:8080/login',{
+          method:'POST',
+          body:JSON.stringify(user),
+          headers:{
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(res=>res.json())
+        .then(data=>{
+          console.log(data)
+          alert('logged in');
+          fetch('http://localhost:8080/')
+          .then(res=>res.text())
+          .then(res=>console.log(res));
+          fetch('http://localhost:8080/user/books')
+          .then(res=>console.log(res));
+        })
+      // for(let user of users){
+      //   if(user.email === username && user.password === password)
+      //    { 
+      //      isLoginValid=true;
+      //      localStorage.setItem('email',username );
+      //      navigate('/')
+      //      break;
+      //    }
+      // }
+      // if(!isLoginValid) {
+      //  setErrorMsg('Invalid Credentials')
+      //   //alert('Invalid credentials')
+      // }
     }
   return (
     <div><h1 className='title'>Connectz</h1>

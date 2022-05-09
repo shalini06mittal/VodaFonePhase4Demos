@@ -32,12 +32,6 @@
     }
   ],
   "posts": [
-    {
-      "email": "shalini@connectz.com",
-      "title": "Learn TomTrain",
-      "description": "This post will provide you with tips and tricks to lead a succesful training",
-      "date-created": "12-12-2021",
-      "id": 1
-    }
+    
   ]
 }
