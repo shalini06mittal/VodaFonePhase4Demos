@@ -4,25 +4,25 @@ import CounterOutput from '../output/CounterOutput'
 import {increment, decrement, add, sub} from '../../redux/CounterReducerSlice';
 import { connect } from 'react-redux';
 class Counter extends Component {
-    state={
-        count:0
-    }
-    handleCounterChange = (action, value)=>{
-        switch(action){
-            case 'inc':
-                this.setState({count:this.state.count+1});
-                break;
-            case 'dec':
-                    this.setState({count:this.state.count-1});
-                    break;
-            case 'add':
-                        this.setState({count:this.state.count+value});
-                        break;
-            case 'sub':
-                this.setState({count:this.state.count-value});
-                break;
-        }
-    }
+    // state={
+    //     count:0
+    // }
+    // handleCounterChange = (action, value)=>{
+    //     switch(action){
+    //         case 'inc':
+    //             this.setState({count:this.state.count+1});
+    //             break;
+    //         case 'dec':
+    //                 this.setState({count:this.state.count-1});
+    //                 break;
+    //         case 'add':
+    //                     this.setState({count:this.state.count+value});
+    //                     break;
+    //         case 'sub':
+    //             this.setState({count:this.state.count-value});
+    //             break;
+    //     }
+    // }
   render() {
       console.log(this.props)
     return (
@@ -44,7 +44,7 @@ class Counter extends Component {
   }
 }
 // maps the stores state to the component props
-// creducer is the name of the reducer configured in index.js
+// counterreducer is the name of the reducer configured in index.js
 // and count is the state within the slice
 const mapStateToProps =(state)=>{
     console.log(state)

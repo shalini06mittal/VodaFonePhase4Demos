@@ -6,12 +6,23 @@ import reportWebVitals from './reportWebVitals';
 import { configureStore } from '@reduxjs/toolkit'
 import {Provider} from 'react-redux';
 import counterreducer, { decrement } from './redux/CounterReducerSlice';
+
 const store = configureStore({
   reducer:{
     counterreducer
   }
 })
-
+const mythunk = (dispatch, getState)=>{
+  console.log('thunk running...')
+  const stateBefore = getState()
+  console.log(`Before Count State ${stateBefore.counterreducer.count}`)
+  setTimeout(() => {
+    dispatch(decrement());
+    const stateAfter = getState()
+    console.log(`After Count State ${stateAfter.counterreducer.count}`)
+  }, 4000);
+}
+store.dispatch(mythunk)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>

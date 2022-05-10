@@ -1,5 +1,12 @@
 import {createSlice} from '@reduxjs/toolkit';
 
+// middleware
+
+export const incrementAsync = ()=>(dispatch)=>{
+    setTimeout(() => {
+        dispatch(increment())
+    }, 2000);
+}
 const initialState = {count:10}
 const counter = createSlice({
     name:'counter',
