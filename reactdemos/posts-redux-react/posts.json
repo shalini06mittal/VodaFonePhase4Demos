@@ -1,25 +1,32 @@
 {
-    "posts":[
-        {
-            "id": "1",
-            "title": "The CheeseCake Factory",
-            "date": "2022-05-09 16:17:34",
-            "author":"Pierce Pedson",
-            "content": "The Cheesecake Factory is an American chain of restaurants, localized around the world. If you’re not familiar with it, you may recognize the name from the hit series The Big Bang Theory. They have a large following on Facebook and regularly post about food that’s on their menu. These posts get a lot of engagement, due to the great images used and the funny text accompanying them."
-        },
-        {
-            "id": "2",
-            "title": "Google: Share Customer Stories",
-            "date": "2022-05-05 14:20:24",
-            "author":"Steve Wright",
-            "content": "Google Maps is one of those things that doesn’t need much explaining. Most people know what it does, it helps you get from A to B. It can even find you a faster route when there’s loads of traffic up ahead. But a few days back, Google shared an interesting customer story on Twitter."
-        },
-        {
-            "id": "3",
-            "title": "Tony’s Chocolonely",
-            "date": "2022-05-06 03:05:10",
-            "author":"Chocolate Brown",
-            "content": "Tony Chocolonely is a Dutch company that sells chocolate. Their chocolate bars are quite popular and their mission is to make chocolate 100% slave-free. As they are opinionated, which fits their mission, they often get a lot of engagement on their social posts"
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "The CheeseCake Factory",
+      "date": "2022-05-09 16:17:34",
+      "author": "Pierce Pedson",
+      "content": "The Cheesecake Factory is an American chain of restaurants, localized around the world. If you’re not familiar with it, you may recognize the name from the hit series The Big Bang Theory. They have a large following on Facebook and regularly post about food that’s on their menu. These posts get a lot of engagement, due to the great images used and the funny text accompanying them."
+    },
+    {
+      "id": 2,
+      "title": "Google: Share Customer Stories",
+      "date": "2022-05-05 14:20:24",
+      "author": "Steve Wright",
+      "content": "Google Maps is one of those things that doesn’t need much explaining. Most people know what it does, it helps you get from A to B. It can even find you a faster route when there’s loads of traffic up ahead. But a few days back, Google shared an interesting customer story on Twitter."
+    },
+    {
+      "id": 3,
+      "title": "Tony’s Chocolonely",
+      "date": "2022-05-06 03:05:10",
+      "author": "Chocolate Brown",
+      "content": "Tony Chocolonely is a Dutch company that sells chocolate. Their chocolate bars are quite popular and their mission is to make chocolate 100% slave-free. As they are opinionated, which fits their mission, they often get a lot of engagement on their social posts"
+    },
+    {
+      "title": "Nothing",
+      "content": "hey come on chal hattt",
+      "author": "Noone",
+      "date": "2022-05-10T14:50:31.465Z",
+      "id": 4
+    }
+  ]
 }
