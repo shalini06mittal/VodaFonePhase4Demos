@@ -4,15 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { configureStore } from '@reduxjs/toolkit'
-import { combineReducers } from 'redux'
 import {Provider} from 'react-redux';
-
-const reducer = combineReducers({
-  // here we will be adding reducers
-})
+import counterreducer, { decrement } from './redux/CounterReducerSlice';
 const store = configureStore({
-  reducer,
+  reducer:{
+    counterreducer
+  }
 })
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
