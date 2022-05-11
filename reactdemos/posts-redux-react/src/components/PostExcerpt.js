@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const PostExcerpt = ({ post }) => {
     return (
       <article className="post-excerpt" key={post.id}>
@@ -6,6 +8,7 @@ export const PostExcerpt = ({ post }) => {
           {post.author}: {post.date} 
         </div>
         <p className="post-content">{post.content}</p>
+        <Link to={`/edit/${post.id}`}>Edit</Link>
       </article>
     )
   }

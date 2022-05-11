@@ -6,7 +6,9 @@ import reportWebVitals from './reportWebVitals';
 
 import { Provider } from 'react-redux';
 import store from './app/store';
+import { fetchPosts } from './redux/PostsSlice';
 
+store.dispatch(fetchPosts())
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
